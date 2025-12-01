@@ -1,0 +1,258 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+:root {
+    --primary: #00A64F;
+    --secondary: #EAEBEF;
+    --body: #F2F3F7;
+    --white: #FFFFFF;
+    --h1: 4.5rem;
+
+    --accent-color: #90BDF8;
+    --accent-color-one: #D5D2ED;
+
+    --f-sz-18: 1.125rem;
+    --f-sz-29: 1.813rem;
+    --f-sz-42: 2.625rem;
+    --f-sz-56: 3.5rem;
+}
+
+body {
+    background-color: var(--body);
+    font-family: "PT Sans", sans-serif;
+}
+
+button {
+    background-color: var(--primary);
+    padding: 0.75rem 1.438rem;
+    color: var(--white);
+    border-radius: 2.25rem;
+    font-size: 1.125rem;
+    border: 1px solid var(--primary);
+}
+
+h1 {
+    font-size: var(--h1);
+    line-height: normal;
+    color: #191A30;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 0.3rem;
+
+}
+
+h3 {
+    font-size: var(--f-sz-29);
+    color: #313131;
+    margin: 0;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: "Inter", sans-serif;
+    font-size: var(--f-sz-42);
+    color: #313131;
+    margin: 5.625rem 0;
+    font-weight: bold;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    padding: 1.125rem 13.636vw;
+}
+
+.form-bg {
+    background-color: var(--secondary);
+    max-width: 22.778vw;
+}
+
+.flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lang-select {
+    all: unset;
+    color: #191A30;
+    cursor: pointer;
+    font-size: var(--f-sz-18);
+    margin-left: 12px;
+}
+
+.lang-select:focus {
+    box-shadow: red;
+}
+
+.banner_img {
+    background-image: url(./img/banner_img.png);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+section {
+    height: 100dvh;
+}
+
+.section_one {
+    padding: 1.125rem 13.636vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100dvh - 117px);
+}
+
+.section_one>div {
+    width: 100%;
+}
+
+.section_two {
+    height: 40dvh;
+    padding: 1.125rem 13.636vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section_three {
+    padding: 1.125rem 13.636vw;
+    text-align: center;
+    height: 100vh;
+
+}
+
+.inner-footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.article-text {
+    margin: 0;
+    margin-bottom: 4rem;
+    font-size: 1.125rem;
+}
+
+.btn-container {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.btn-container a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-size: var(--f-sz-18);
+    font-weight: bold;
+}
+
+.form-bg {
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--f-sz-29);
+
+}
+
+input {
+    padding: 0.969rem 0.875rem;
+    border-radius: 5px;
+    border: 1px solid var(--white);
+}
+
+input::placeholder {
+    color: #656565;
+}
+
+.number-list {
+    list-style: item;
+    counter-reset: item;
+    flex: 1 1 100%;
+    max-width: 19.293vw;
+}
+
+.number-list li {
+    list-style-position: outside;
+    color: #191A30;
+    font-size: var(--f-sz-29);
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.number-list li::before {
+    counter-increment: item;
+    content: "0" counter(item);
+    font-weight: bold;
+    font-size: var(--f-sz-56);
+    color: var(--accent-color-one);
+    margin-right: 2rem;
+}
+
+.mobile-view-image {
+    flex: 1 1 100%;
+    max-width: 19.192vw;
+}
+
+.mobile-view-brand {
+    flex: 1 1 100%;
+    max-width: 16.616vw;
+}
+
+@media (max-width: 991px) {
+
+    .inner-footer,
+    .section_one,
+    .section_three,
+    .section_two {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .banner_img {
+        background-size: auto;
+    }
+
+    .form-bg,
+    .number-list,
+    .mobile-view-brand {
+        max-width: 100%;
+    }
+
+    .inner-footer {
+        align-items: center;
+    }
+
+    .mobile-view-image {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 568px) {
+    html {
+        font-size: 14px;
+    }
+
+    .header,
+    .inner-footer,
+    .section_one,
+    .section_three,
+    .section_two {
+        padding: 1.125rem 3.636vw;
+        ;
+    }
+
+}
