@@ -115,10 +115,14 @@ section {
     height: calc(100dvh - 117px);
 }
 
-.section_one>div {
-    width: 100%;
+.section_one > article {
+    flex: 1 1 100%;
+    max-width: 36.747vw;
 }
-
+.section_one > div {
+    flex: 1 1 100%;
+    max-width:  22.778vw;
+}
 .section_two {
     height: 40dvh;
     padding: 1.125rem 13.636vw;
@@ -166,6 +170,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: var(--f-sz-29);
+    width: 100%;
 
 }
 
